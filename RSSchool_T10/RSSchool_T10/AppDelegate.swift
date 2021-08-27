@@ -16,8 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        let vc = ViewController()
-        window?.rootViewController = vc
+        window?.rootViewController = NewGameViewController()
         window?.makeKeyAndVisible()
 
         return true
