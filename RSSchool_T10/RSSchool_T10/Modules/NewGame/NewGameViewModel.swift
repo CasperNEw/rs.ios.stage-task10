@@ -8,7 +8,7 @@
 import Foundation
 
 struct Player: Equatable {
-    let uuid: UUID
+	let uuid: String = UUID().uuidString
     let name: String
 }
 
@@ -16,23 +16,33 @@ protocol NewGameViewModelProtocol: AnyObject {
 
     func getPlayers() -> [Player]
     func updatePlayers(_ players: [Player])
+	func addPlayer(_ name: String)
+
+	var playersDidChange: (() -> ())? { get set }
 }
 
 final class NewGameViewModel: NewGameViewModelProtocol {
 
-    private var repository: [Player] = [.init(uuid: UUID(), name: "Саша"),
-                                        .init(uuid: UUID(), name: "Маша"),
-                                        .init(uuid: UUID(), name: "Наташа")] {
+    private var repository: [Player] = [.init(name: "Саша"),
+                                        .init(name: "Маша"),
+                                        .init(name: "Наташа")] {
         didSet {
             print(repository)
         }
     }
 
-    func updatePlayers(_ players: [Player]) {
-        repository = players
-    }
+	var playersDidChange: (() -> ())?
 
     func getPlayers() -> [Player] {
         return repository
     }
+
+	func updatePlayers(_ players: [Player]) {
+		repository = players
+	}
+
+	func addPlayer(_ name: String) {
+		repository.append(.init(name: name))
+		playersDidChange?()
+	}
 }

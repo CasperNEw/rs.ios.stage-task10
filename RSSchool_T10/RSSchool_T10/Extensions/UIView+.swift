@@ -22,6 +22,7 @@ extension UIView {
         static let bottomInset: CGFloat = 65
         static let topInset: CGFloat = 12
         static let space: CGFloat = 25
+		static let defaultHeight: CGFloat = 60
 
     }
 }

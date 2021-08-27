@@ -19,17 +19,48 @@ class NewGameViewController: UIViewController {
         self.view = view
     }
 
-    override func viewDidLoad() { }
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		setupNavigationBar()
+	}
+
+	// MARK: - Privates
+
+	private func setupNavigationBar() {
+		if navigationController?.viewControllers.count == 1 {
+			navigationItem.leftBarButtonItems = nil
+			return
+		}
+		let leftItem = UIBarButtonItem(title: "Cancel", style: .plain,
+									   target: self, action: #selector(cancelTapped))
+		setLeftNavigationButton(leftItem)
+	}
+
+	// MARK: - Actions
+
+	@objc private func cancelTapped() {
+		navigationController?.popViewController(animated: true)
+	}
 }
 
 // MARK: - NewGameViewDelegate
 extension NewGameViewController: NewGameViewDelegate {
 
     func addPlayerTapped() {
-        // todo
+		let addViewController = AddPlayerViewController()
+		addViewController.delegate = self
+		navigationController?.pushViewController(addViewController, animated: true)
     }
 
     func startButtonTapped() {
         // todo
     }
+}
+
+// MARK: - AddPlayerDelegate
+extension NewGameViewController: AddPlayerDelegate {
+
+	func addPlayer(_ player: String) {
+		viewModel.addPlayer(player)
+	}
 }

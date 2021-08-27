@@ -44,7 +44,7 @@ class NewGamePlayerCell: UITableViewCell {
     private let actionButton = UIButton()
 
     private let titleLabel = UILabel(text: "",
-                                     font: .nunito(style: .bold, size: 20),
+                                     font: .nunito(style: .extraBolt, size: 20),
                                      textColor: .white,
                                      numberOfLines: 1,
                                      textAlignment: .left)
@@ -77,7 +77,7 @@ class NewGamePlayerCell: UITableViewCell {
         switch state {
         case .addPlayer:
             actionButton.setImage(UIImage.Game.add, for: .normal)
-            titleLabel.font = .nunito(style: .regular, size: 20)
+            titleLabel.font = .nunito(style: .semiBold, size: 20)
             titleLabel.textColor = UIColor.Game.mint
             titleLabel.text = "Add player"
         case .player(let player):

@@ -19,10 +19,10 @@ extension UIImage {
 
     enum Game {
 
-        static let add: UIImage? = .init(named: "icon_add")
-        static let button: UIImage? = .init(named: "icon_button")
-        static let delete: UIImage? = .init(named: "icon_delete")
-        static let sort: UIImage? = .init(named: "icon_sort")
+        static let add = UIImage(named: "icon_add")
+        static let button = UIImage(named: "icon_button")
+        static let delete = UIImage(named: "icon_delete")
+        static let sort = UIImage(named: "icon_sort")
 
     }
 }

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD86A97D26DCEAC200DD4C22 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD86A97C26DCEAC200DD4C22 /* UIViewController+.swift */; };
+		BD86A98226DCF72A00DD4C22 /* AddPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD86A98126DCF72A00DD4C22 /* AddPlayerViewController.swift */; };
+		BD86A98626DCF77F00DD4C22 /* AddPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD86A98526DCF77F00DD4C22 /* AddPlayerView.swift */; };
 		DA39FCD426D7EF08003CE67A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA39FCD326D7EF08003CE67A /* AppDelegate.swift */; };
 		DA39FCDD26D7EF08003CE67A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA39FCDC26D7EF08003CE67A /* Assets.xcassets */; };
 		DA39FCE026D7EF08003CE67A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA39FCDE26D7EF08003CE67A /* LaunchScreen.storyboard */; };
@@ -41,6 +44,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD86A97C26DCEAC200DD4C22 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		BD86A98126DCF72A00DD4C22 /* AddPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayerViewController.swift; sourceTree = "<group>"; };
+		BD86A98526DCF77F00DD4C22 /* AddPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayerView.swift; sourceTree = "<group>"; };
 		DA39FCD026D7EF08003CE67A /* RSSchool_T10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSchool_T10.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA39FCD326D7EF08003CE67A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA39FCDC26D7EF08003CE67A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -87,6 +93,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD86A98026DCF71900DD4C22 /* AddPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				BD86A98126DCF72A00DD4C22 /* AddPlayerViewController.swift */,
+				BD86A98526DCF77F00DD4C22 /* AddPlayerView.swift */,
+			);
+			path = AddPlayer;
+			sourceTree = "<group>";
+		};
 		DA39FCC726D7EF08003CE67A = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +136,7 @@
 		DA39FCE726D7F693003CE67A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				BD86A98026DCF71900DD4C22 /* AddPlayer */,
 				DA39FCE826D7F69C003CE67A /* NewGame */,
 			);
 			path = Modules;
@@ -169,6 +185,7 @@
 				DA39FD1E26D8CB50003CE67A /* UIImage+.swift */,
 				DA39FD2026D8CE94003CE67A /* CGFloat+.swift */,
 				DA39FD2726D8EF97003CE67A /* UITableViewCell+.swift */,
+				BD86A97C26DCEAC200DD4C22 /* UIViewController+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -285,8 +302,11 @@
 				DA39FD0E26D7FB9F003CE67A /* NewGameView.swift in Sources */,
 				DA39FD1F26D8CB50003CE67A /* UIImage+.swift in Sources */,
 				DA39FD2626D8E4B2003CE67A /* SelfSizingTableView.swift in Sources */,
+				BD86A97D26DCEAC200DD4C22 /* UIViewController+.swift in Sources */,
 				DA39FD1426D8C5C7003CE67A /* UIColor+.swift in Sources */,
+				BD86A98226DCF72A00DD4C22 /* AddPlayerViewController.swift in Sources */,
 				DA39FD1D26D8CAAB003CE67A /* PushButton.swift in Sources */,
+				BD86A98626DCF77F00DD4C22 /* AddPlayerView.swift in Sources */,
 				DA39FD2826D8EF97003CE67A /* UITableViewCell+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

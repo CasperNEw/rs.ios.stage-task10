@@ -16,10 +16,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = NewGameViewController()
+		let controller = NewGameViewController()
+		let navigationController = UINavigationController(rootViewController: controller)
+		window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
+
+		setupAppearance()
 
         return true
     }
+
+	private func setupAppearance() {
+		guard let barButtonItemFont = UIFont.nunito(style: .extraBolt, size: 17)
+		else { return }
+
+		UIBarButtonItem
+			.appearance()
+			.setTitleTextAttributes(
+				[NSAttributedString.Key.font: barButtonItemFont,
+				 NSAttributedString.Key.foregroundColor: UIColor.Game.mint,], for: .normal)
+
+		UINavigationBar.appearance().barTintColor = UIColor.Game.black
+		UINavigationBar.appearance().tintColor = UIColor.Game.black
+		UINavigationBar.appearance().isTranslucent = false
+
+		UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+		UINavigationBar.appearance().shadowImage = UIImage()
+		UINavigationBar.appearance().backIndicatorImage = UIImage()
+
+		UITextField.appearance().tintColor = UIColor.Game.lightGray
+	}
 }
 

@@ -12,7 +12,9 @@ class SelfSizingTableView: UITableView {
     // MARK: - Properties
     override var contentSize: CGSize {
         didSet {
-            invalidateIntrinsicContentSize()
+			DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+				self.invalidateIntrinsicContentSize()
+			}
         }
     }
 

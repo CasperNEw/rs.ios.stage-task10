@@ -16,7 +16,7 @@ final class NewGameView: UIView {
 
     // MARK: - Properties
     private let mainLabel = UILabel(text: "Game Counter",
-                                    font: .nunito(style: .bold, size: 36),
+                                    font: .nunito(style: .extraBolt, size: 36),
                                     textColor: .white,
                                     numberOfLines: 1,
                                     textAlignment: .left)
@@ -28,12 +28,16 @@ final class NewGameView: UIView {
 
     weak var delegate: NewGameViewDelegate?
     weak var viewModel: NewGameViewModelProtocol? {
-        didSet { createDataSource() }
+        didSet {
+			updateDataSource()
+			bindViewModel()
+		}
     }
 
     private var didSetupConstraints = false
     private var dataSource: [NewGamePlayerCell.State] = [.addPlayer] {
         didSet {
+			startButton.isEnabled = !(dataSource.count == 1)
             viewModel?.updatePlayers(dataSource.compactMap({ $0.player }))
         }
     }
@@ -59,11 +63,18 @@ final class NewGameView: UIView {
     }
 
     // MARK: - Module functions
-    private func createDataSource() {
+    private func updateDataSource() {
         var array: [NewGamePlayerCell.State] = viewModel?.getPlayers().map { .player($0) } ?? []
         array.append(.addPlayer)
         dataSource = array
     }
+
+	private func bindViewModel() {
+		viewModel?.playersDidChange = { [weak self] in
+			self?.updateDataSource()
+			self?.tableView.reloadData()
+		}
+	}
 
     private func setupViews() {
 
@@ -206,7 +217,7 @@ extension NewGameView: NewGamePlayerCellDelegate {
         case .player:
             guard let index = dataSource.firstIndex(of: state) else { return }
             dataSource.remove(at: index)
-            tableView.deleteRows(at: [IndexPath(row: index, section: 0)], with: .fade)
+			tableView.deleteRows(at: [IndexPath(row: index, section: 0)], with: .automatic)
         }
     }
 }
