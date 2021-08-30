@@ -10,6 +10,8 @@
 		BD86A97D26DCEAC200DD4C22 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD86A97C26DCEAC200DD4C22 /* UIViewController+.swift */; };
 		BD86A98226DCF72A00DD4C22 /* AddPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD86A98126DCF72A00DD4C22 /* AddPlayerViewController.swift */; };
 		BD86A98626DCF77F00DD4C22 /* AddPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD86A98526DCF77F00DD4C22 /* AddPlayerView.swift */; };
+		BD86A98A26DD06C800DD4C22 /* GameProcessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD86A98926DD06C800DD4C22 /* GameProcessViewController.swift */; };
+		BD86A98E26DD072100DD4C22 /* GameProcessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD86A98D26DD072100DD4C22 /* GameProcessView.swift */; };
 		DA39FCD426D7EF08003CE67A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA39FCD326D7EF08003CE67A /* AppDelegate.swift */; };
 		DA39FCDD26D7EF08003CE67A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA39FCDC26D7EF08003CE67A /* Assets.xcassets */; };
 		DA39FCE026D7EF08003CE67A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA39FCDE26D7EF08003CE67A /* LaunchScreen.storyboard */; };
@@ -47,6 +49,8 @@
 		BD86A97C26DCEAC200DD4C22 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		BD86A98126DCF72A00DD4C22 /* AddPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayerViewController.swift; sourceTree = "<group>"; };
 		BD86A98526DCF77F00DD4C22 /* AddPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayerView.swift; sourceTree = "<group>"; };
+		BD86A98926DD06C800DD4C22 /* GameProcessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameProcessViewController.swift; sourceTree = "<group>"; };
+		BD86A98D26DD072100DD4C22 /* GameProcessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameProcessView.swift; sourceTree = "<group>"; };
 		DA39FCD026D7EF08003CE67A /* RSSchool_T10.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSchool_T10.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA39FCD326D7EF08003CE67A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA39FCDC26D7EF08003CE67A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -102,6 +106,15 @@
 			path = AddPlayer;
 			sourceTree = "<group>";
 		};
+		BD86A98826DD068F00DD4C22 /* GameProcess */ = {
+			isa = PBXGroup;
+			children = (
+				BD86A98926DD06C800DD4C22 /* GameProcessViewController.swift */,
+				BD86A98D26DD072100DD4C22 /* GameProcessView.swift */,
+			);
+			path = GameProcess;
+			sourceTree = "<group>";
+		};
 		DA39FCC726D7EF08003CE67A = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +149,7 @@
 		DA39FCE726D7F693003CE67A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				BD86A98826DD068F00DD4C22 /* GameProcess */,
 				BD86A98026DCF71900DD4C22 /* AddPlayer */,
 				DA39FCE826D7F69C003CE67A /* NewGame */,
 			);
@@ -292,11 +306,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA39FD1226D7FE2D003CE67A /* UIView+.swift in Sources */,
+				BD86A98E26DD072100DD4C22 /* GameProcessView.swift in Sources */,
 				DA39FCD426D7EF08003CE67A /* AppDelegate.swift in Sources */,
 				DA39FD0C26D7F897003CE67A /* UIFont+.swift in Sources */,
 				DA39FD1026D7FBEA003CE67A /* UILabel+.swift in Sources */,
 				DA39FD2126D8CE94003CE67A /* CGFloat+.swift in Sources */,
 				DA39FD2A26D8FA13003CE67A /* NewGameViewModel.swift in Sources */,
+				BD86A98A26DD06C800DD4C22 /* GameProcessViewController.swift in Sources */,
 				DA39FD2426D8D0AE003CE67A /* NewGamePlayerCell.swift in Sources */,
 				DA39FCEA26D7F6B2003CE67A /* NewGameViewController.swift in Sources */,
 				DA39FD0E26D7FB9F003CE67A /* NewGameView.swift in Sources */,

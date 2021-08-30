@@ -70,13 +70,13 @@ final class AddPlayerView: UIView {
 			mainLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Constants.sideInset),
 			mainLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: Constants.sideInset.mirror),
 
-			backgroundTextFieldView.topAnchor.constraint(equalTo: mainLabel.bottomAnchor, constant: Constants.space),
+			backgroundTextFieldView.topAnchor.constraint(equalTo: mainLabel.bottomAnchor, constant: Constants.space25),
 			backgroundTextFieldView.leadingAnchor.constraint(equalTo: leadingAnchor),
 			backgroundTextFieldView.trailingAnchor.constraint(equalTo: trailingAnchor),
 			backgroundTextFieldView.heightAnchor.constraint(equalToConstant: Constants.defaultHeight),
 
-			textField.leadingAnchor.constraint(equalTo: backgroundTextFieldView.leadingAnchor, constant: Constants.space),
-			textField.trailingAnchor.constraint(equalTo: backgroundTextFieldView.trailingAnchor, constant: Constants.space.mirror),
+			textField.leadingAnchor.constraint(equalTo: backgroundTextFieldView.leadingAnchor, constant: Constants.space25),
+			textField.trailingAnchor.constraint(equalTo: backgroundTextFieldView.trailingAnchor, constant: Constants.space25.mirror),
 			textField.bottomAnchor.constraint(equalTo: backgroundTextFieldView.bottomAnchor),
 			textField.topAnchor.constraint(equalTo: backgroundTextFieldView.topAnchor)
 		])

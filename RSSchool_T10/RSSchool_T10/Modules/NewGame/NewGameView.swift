@@ -109,7 +109,7 @@ final class NewGameView: UIView {
             startButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: bottomInset),
             startButton.heightAnchor.constraint(equalToConstant: Constants.bottomInset),
 
-            tableView.topAnchor.constraint(equalTo: mainLabel.bottomAnchor, constant: Constants.space),
+            tableView.topAnchor.constraint(equalTo: mainLabel.bottomAnchor, constant: Constants.space25),
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: Constants.sideInset),
             tableView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: Constants.sideInset.mirror),
             tableView.bottomAnchor.constraint(lessThanOrEqualTo: startButton.topAnchor, constant: Constants.bottomInset.mirror)

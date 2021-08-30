@@ -53,7 +53,8 @@ extension NewGameViewController: NewGameViewDelegate {
     }
 
     func startButtonTapped() {
-        // todo
+		let viewController = GameProcessViewController(players: viewModel.getPlayers())
+		navigationController?.pushViewController(viewController, animated: true)
     }
 }
 
